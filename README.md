@@ -65,12 +65,8 @@ I followed this process to achieve syncing in backgroun
                 android:name="android.accounts.AccountAuthenticator"
                 android:resource="@xml/authenticator" />
         </service>
-      
- 7. Be sure of Account Type what you defined in sync_contacts and ContactSyncAdapter must be same.
- 	Otherwise you will get this exception caller uid is different than the authenticator's uid to fix
- 	this exception you need to check account type.
         
- 8. At last you need to add permission
+7.At last you need to add permission
  
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
@@ -79,5 +75,10 @@ I followed this process to achieve syncing in backgroun
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+        
+8.Be sure of Account Type what you defined in sync_contacts and ContactSyncAdapter must be same.
+ 	Otherwise you will get this exception caller uid is different than the authenticator's uid to fix
+ 	this exception you need to check account type.
+
     
     
